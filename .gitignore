@@ -1,0 +1,43 @@
+# Kivy specific ignores
+*.kv.py
+*.log
+*.pyc
+*.pyo
+*.zip
+*.rar
+*.tar.gz
+*.egg-info/
+
+# Kivy build and packaging files
+build/
+dist/
+android/
+ios/
+
+# Cache directories
+.cache/
+__pycache__/
+.mypy_cache/
+.pytest_cache/
+
+# IDE and Editor specific files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+*.swp
+*.swo
+
+# Miscellaneous
+README.md.bak
+*.bak
+*.tmp
+*.DS_Store
+thumbs.db
+
+# If you're using virtual environment, ignore the venv directory
+venv/
+.env/
+
+# Kivy's default generated files
+.kv.d/

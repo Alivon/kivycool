@@ -1,0 +1,32 @@
+#:kivy 2.3.0
+
+<ClipboardLayout>:
+    TextInput:
+        id: text_input
+        font_name: app.font_path
+        size_hint: (1, 0.5)
+    
+    TextInput:
+        id: text_output
+        font_name: app.font_path
+        size_hint: (1, 0.5)
+        readonly: True
+        
+
+    Button:
+        text: "复制"
+        font_name: app.font_path
+        size_hint: (1, 0.1)
+        on_press: root.copy_to_clipboard()
+
+    Button:
+        text: "粘贴"
+        font_name: app.font_path
+        size_hint: (1, 0.1)
+        on_press: root.paste_from_clipboard()
+
+    Label:
+        id: clipboard_label
+        text: "剪贴板内容"
+        font_name: app.font_path
+        size_hint: (1, 0.1)
