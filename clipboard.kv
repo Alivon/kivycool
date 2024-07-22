@@ -1,33 +1,18 @@
 #:kivy 2.3.0
 
-
 <ClipboardLayout>:
-    TextInput:
-        id: text_input
-        font_name: app.font_path
-        size_hint: (1, 0.5)
-    
-    TextInput:
-        id: text_output
-        font_name: app.font_path
-        size_hint: (1, 0.5)
-        readonly: True
-        
-
-    Button:
-        text: "复制"
-        font_name: app.font_path
-        size_hint: (1, 0.1)
-        on_press: root.copy_to_clipboard()
-
-    Button:
-        text: "粘贴"
-        font_name: app.font_path
-        size_hint: (1, 0.1)
-        on_press: root.paste_from_clipboard()
-
+    orientation: 'vertical'
     Label:
-        id: clipboard_label
-        text: "剪贴板内容"
-        font_name: app.font_path
-        size_hint: (1, 0.1)
+        id: history_label
+        text: '剪贴板历史记录将在此显示'
+        font_name: 'NotoSans'
+        size_hint_y: None
+        height: self.texture_size[1]
+        text_size: self.width, None
+        halign: 'left'
+        valign: 'top'
+    Button:
+        text: '查看剪贴板历史记录'
+        font_name: 'NotoSans'
+        size_hint_y: 0.1
+        on_press: root.show_clipboard_history()
